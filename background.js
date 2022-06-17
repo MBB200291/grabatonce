@@ -66,7 +66,7 @@ function closureAction() {
     // if (actionEnabled) {
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
-      files: ["rectangling.js"],
+      files: ["dragbox.js"],
       // files: ["content.js"],
       // func: attachAction,
       // func: getTitle,
