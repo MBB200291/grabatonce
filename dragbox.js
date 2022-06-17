@@ -4,8 +4,7 @@
 
   chrome.storage.local.get("gao", function (result) {
     if (result["gao"]) {
-      alert("on");
-      // document.addEventListener("keydown", action);
+      alert("Grab them at once!");
       document.onmousedown = dragBoxToDownload;
     } else {
       alert("off");
@@ -20,7 +19,7 @@
     div.style.left = evtD.clientX + "px";
     div.style.top = evtD.clientY + "px";
     div.style.cssText =
-      "  border: 1px dashed blue;  background: #80ff00;  position: absolute;  width: 0; height: 0;  opacity: 0.1;";
+      "border: 1px dashed blue;  background: #80ff00;  position: absolute;  width: 0; height: 0;  opacity: 0.1;";
     document.body.appendChild(div);
     document.onmousemove = function (evtM) {
       div.style.left = Math.min(evtM.clientX, startx) + "px";
@@ -34,14 +33,14 @@
         div.parentNode.removeChild(div);
         document.onmousemove = null;
         document.onmouseup = null;
-        var mouserectangle = {
+        var dragbox = {
           left: Math.min(startx, endx),
           top: Math.max(starty, endy),
           right: Math.max(startx, endx),
           bottom: Math.min(starty, endy),
         };
-        console.log(mouserectangle);
-        downloadBatch(filter(getDownloadableElements(), mouserectangle));
+        console.log(dragbox);
+        downloadBatch(filter(getDownloadableElements(), dragbox));
       };
     };
   }
@@ -88,11 +87,11 @@
       return false;
     }
   }
-  function filter(downloadableElements, mouserectangle) {
+  function filter(downloadableElements, dragbox) {
     var selectedElements = [];
     for (e of downloadableElements) {
       var position = getOffset(e);
-      var inside = checkInside(position, mouserectangle);
+      var inside = checkInside(position, dragbox);
       if (inside) {
         selectedElements.push(e);
         console.log(position);

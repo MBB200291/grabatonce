@@ -1,6 +1,6 @@
-# Grab at Once!
+# Grab them at Once!
 
-Chrome extension that allow downloading files in one go.
+A chrome extension allow downloading files in one go.
 
 ## Usage
 
@@ -13,12 +13,13 @@ Chrome extension that allow downloading files in one go.
 - [ ] 選項能新增下載檔案副檔名類型
 - [ ] 考慮框選時同時須按住鍵盤某個鍵
 - [ ] 選擇到的 element 能改變顏色
-- [ ] 框選時關閉原本滑鼠在網頁上的效果
+- [x] 框選時關閉原本滑鼠在網頁上的效果
 - [ ] 選項能新增下載檔案副檔名類型
 
 ## Bugs
 
 - [ ] 框選區塊停留沒有跟著捲動下來
+- [ ] 框選區沒有消失
 
 ## Attribution
 
