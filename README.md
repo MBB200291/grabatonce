@@ -1,2 +1,2 @@
 # grabatonce
-Chrome extension that allow downloading files in one go.
+A chrome extension allow for downloading files in one go.
