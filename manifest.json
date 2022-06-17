@@ -1,0 +1,29 @@
+{
+  "name": "Grab at once",
+  "description": "A simple extension for helping download multiple link by mouse circulation",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_icon": {
+      "16": "/images/grab_wb_16.png",
+      "32": "/images/grab_wb_32.png",
+      "64": "/images/grab_wb_64.png",
+      "128": "/images/grab_wb_128.png",
+      "256": "/images/grab_wb_256.png",
+      "512": "/images/grab_wb_512.png"
+    },
+    "default_title": "Grab at Once!"
+  },
+  "icons": {
+    "16": "/images/grab_16.png",
+    "32": "/images/grab_32.png",
+    "64": "/images/grab_64.png",
+    "128": "/images/grab_128.png",
+    "256": "/images/grab_256.png",
+    "512": "/images/grab_512.png"
+  }
+}
