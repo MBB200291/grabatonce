@@ -1,6 +1,6 @@
 # Grab them at Once!
 
-A chrome extension allow downloading files in one go.
+A chrome extension allow for downloading files in one go.
 
 ## Usage
 
