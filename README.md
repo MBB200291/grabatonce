@@ -1,6 +1,6 @@
-# Grab them at Once!
+# Grab at Once!
 
-A chrome extension allow for downloading files in one go.
+A chrome extension allow for downloading files by mouse dragging-box.
 
 ## Usage
 
