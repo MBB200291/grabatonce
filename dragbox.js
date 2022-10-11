@@ -4,7 +4,7 @@
 
   chrome.storage.local.get("gao", function (result) {
     if (result["gao"]) {
-      alert("Grab them at once!");
+      alert("Grab them at once! (v0.1.2)");
       document.onmousedown = dragBoxToDownload;
     } else {
       alert("off");
@@ -12,24 +12,24 @@
     }
   });
   function dragBoxToDownload(evtD) {
-    var startx = evtD.clientX;
-    var starty = evtD.clientY;
+    var startx = evtD.pageX;
+    var starty = evtD.pageY;
     var div = document.createElement("div");
     div.className = "tempDiv";
-    div.style.left = evtD.clientX + "px";
-    div.style.top = evtD.clientY + "px";
+    div.style.left = evtD.pageX + "px";
+    div.style.top = evtD.pageY + "px";
     div.style.cssText =
       "border: 1px dashed blue;  background: #80ff00;  position: absolute;  width: 0; height: 0;  opacity: 0.1;";
     document.body.appendChild(div);
     document.onmousemove = function (evtM) {
-      div.style.left = Math.min(evtM.clientX, startx) + "px";
-      div.style.top = Math.min(evtM.clientY, starty) + "px";
-      div.style.width = Math.abs(startx - evtM.clientX) + "px";
-      div.style.height = Math.abs(starty - evtM.clientY) + "px";
+      div.style.left = Math.min(evtM.pageX, startx) + "px";
+      div.style.top = Math.min(evtM.pageY, starty) + "px";
+      div.style.width = Math.abs(startx - evtM.pageX) + "px";
+      div.style.height = Math.abs(starty - evtM.pageY) + "px";
 
       document.onmouseup = function (evtU) {
-        endx = evtU.clientX;
-        endy = evtU.clientY;
+        endx = evtU.pageX;
+        endy = evtU.pageY;
         div.parentNode.removeChild(div);
         document.onmousemove = null;
         document.onmouseup = null;
